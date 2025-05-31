@@ -32,6 +32,25 @@
     </div>
   </div>
 </div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        const chatChannel = window.chatChannel; // 後で定義
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // ページリロードを防ぐ
+
+            const nameInput = document.querySelector('[name="message[name]"]');
+            const contentInput = document.querySelector('[name="message[content]"]');
+
+            // ActionCable経由でメッセージ送信
+            if (chatChannel && nameInput.value && contentInput.value) {
+                chatChannel.speak(nameInput.value, contentInput.value);
+                contentInput.value = ''; // メッセージ欄をクリア
+            }
+        });
+    });
+</script>
 
 
 
