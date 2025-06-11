@@ -1,7 +1,7 @@
 # README
-
-概要
-Rails ActionCableを使用したリアルタイム通信機能を使った、シンプルなWebSocketを活用したチャットアプリケーションの実装です。
+Rails ActionCableのリアルタイム通信機能(WebSocket)を活用したチャットアプリケーションの実装例です。
 
 * Ruby version: 3.1.4
 * Rails version: 7
+
+![simple_chat_image.png](app/assets/images/simple_chat_image.png)
